@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+body {
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@keyframes pulseText {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.container-with-blur {
+  position: relative;
+  display: grid;
+}
+
+.container-with-blur::before {
+  content: "";
+  grid-area: 1 / 1 / 2 / 2;
+  background: inherit;
+  filter: blur(10px);
+}
+
+.container-with-blur>*:not(:first-child) {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.gradient-item-cases {
+  background: linear-gradient(108deg,
+      rgba(214, 210, 255, 0.71) 3.65%,
+      rgba(219, 217, 241, 0.82) 28.98%,
+      rgba(238, 237, 251, 0.9) 43.13%,
+      rgba(219, 216, 255, 0.87) 71.34%,
+      rgba(206, 220, 255, 0.94) 95.74%);
+}
+
+.border-item-cases {
+  border: 3px solid rgba(123, 114, 235, 0.44);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7b72eb;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  background-color: #7b72eb;
+  width: 15px;
+  height: 15px;
+}
+
+@media screen and (min-height: 850px) {
+  .dnk-left {
+    top: -5%;
+  }
+}
+
+#scrollToTopButton {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#scrollToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.custom-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+/*
+::-webkit-scrollbar {
+  width: 18px; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(123, 114, 235, 0.8);
+  border-radius: 5rem; 
+  border: 3px solid #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(123, 114, 235);
+
+} */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5rem;
+    background: rgb(216, 214, 214);
+  }
+}
+
+/* Service-price-modal scrollbar */
+.service-price-modal::-webkit-scrollbar {
+  width: 12px;
+  height: 5px;
+}
+
+.service-price-modal::-webkit-scrollbar-track {
+  border-radius: 5rem;
+  background: #f1f1f1;
+}
+
+.service-price-modal::-webkit-scrollbar-thumb {
+  background: rgb(189, 186, 186);
+}
+
+.service-price-modal::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+/* Custom select styles */
+.custom-select {
+  background-color: transparent;
+}
+
+.custom-select option {
+  background-color: gray;
+  border: 30px;
+}
+
+.custom-modal-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-modal-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* For Firefox */
+.custom-modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* li {
+  list-style-type: disc; 
+  margin-left: 1em; 
+} */
